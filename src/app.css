@@ -1,0 +1,106 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.slider-container {
+  width: 100%;
+  margin: auto;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.slider-container:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.slider-container .slider {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  height: 100%;
+}
+
+.slider-container .slider .slide img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+.next, .prev {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  border: none;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  background: white;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.next:hover, .prev:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.next:active, .prev:active {
+  outline: none;
+}
+
+.next:focus, .prev:focus {
+  outline: none;
+}
+
+.next {
+  left: 50%;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), to(white));
+  background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+
+.prev {
+  background: -webkit-gradient(linear, right top, left top, from(white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(-90deg, white 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.dots {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 99;
+}
+
+.dots input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .next, .prev {
+    display: none;
+  }
+}
+/*# sourceMappingURL=app.css.map */
